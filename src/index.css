@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(to bottom, #9595f3 0%, #f7f7f8 50%, #2727f2 100%);
+    background-position: center;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+    overflow: -moz-scrollbars-none; 
+}
+
+/* Root Container */
+#root {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Link Styling */
+.a-tag a {
+    border-bottom: 2px solid #fff;
+    transition: color 300ms, border-bottom-color 300ms;
+}
+
+.a-tag a:hover {
+    color: rgb(236, 27, 27); /* Bright red color for hover effect */
+    border-bottom-color: rgb(236, 27, 27); /* Change border color on hover */
+}
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+    #root {
+        max-width: 100vw; /* Ensure full width on smaller screens */
+        padding: 0 1rem; /* Add some padding on smaller screens */
+    }
+}
