@@ -1,4 +1,4 @@
-/* Root element */
+/* Root Element */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -10,61 +10,61 @@
 .logo {
   height: 6em;
   padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms, transform 300ms;
+  transition: filter 300ms ease-in-out, transform 300ms ease-in-out;
 }
 
-/* Logo hover effect */
+/* Hover Animation for Logo */
 .logo:hover {
-  filter: drop-shadow(0 0 2em #ff6b6baa); /* Change to a soft red color */
-  transform: scale(1.1); /* Slightly scale up the logo on hover */
+  filter: drop-shadow(0 0 2em #22d3ee); /* Cyan glow */
+  transform: scale(1.15); /* Slight scale up */
 }
 
-/* React logo specific hover effect */
+/* React-specific logo hover effect */
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #f7b32b); /* Change to a soft yellow color */
-  transform: scale(1.1); /* Slightly scale up the logo on hover */
+  filter: drop-shadow(0 0 2em #f7b32b); /* Yellow glow */
+  transform: scale(1.15); /* Same effect */
 }
 
-/* Keyframes for spinning animation */
+/* Keyframe Spinning Effect */
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+  0% {
+      transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+      transform: rotate(360deg);
   }
 }
 
-/* Apply spinning animation to specific links if prefers-reduced-motion is not set */
+/* If animations are allowed, spin the second logo */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+      animation: logo-spin infinite 20s linear;
   }
 }
 
-/* Card styles */
+/* Card Styles */
 .card {
   padding: 2em;
-  border-radius: 8px; /* Rounded corners for card */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  border-radius: 12px; /* Slightly rounder corners */
+  background: #1c1c24; /* Darker background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
   transition: box-shadow 300ms, transform 300ms;
 }
 
-/* Card hover effect */
+/* Hover effect for Cards */
 .card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
-  transform: translateY(-10px); /* Slight lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+  transform: translateY(-12px); /* Higher lift */
 }
 
-/* Read the docs link styles */
+/* "Read the docs" link styles */
 .read-the-docs {
-  color: #888;
+  color: #a5a5a5;
   transition: color 300ms, text-shadow 300ms;
 }
 
-/* Read the docs hover effect */
+/* Hover effect for "Read the docs" */
 .read-the-docs:hover {
-  color: #333; /* Darker text color on hover */
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Text shadow effect */
+  color: #22d3ee; /* Lighter text color */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
